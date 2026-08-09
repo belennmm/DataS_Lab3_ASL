@@ -3,8 +3,11 @@ from sklearn.model_selection import train_test_split
 import imagehash
 import numpy as np
 from PIL import Image, UnidentifiedImageError
-
+TAM_OBJETIVO = (64, 64)
 #Archivo que contiene funciones auxiliares tomadas el archivo lab3_EDA
+
+
+
 
 def son_realmente_duplicados(ruta1, ruta2, tam=(64, 64), umbral_mse=15):
     """Verificación adicional: compara los píxeles de verdad, no solo el hash."""
@@ -66,3 +69,4 @@ def dividir_train_val_test(
               f"Test: {len(test_df)} ({len(test_df)/total:.1%})")
         
     return train_df, val_df, test_df
+
